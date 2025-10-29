@@ -115,8 +115,8 @@ export default function Index() {
               }
             ].map((item, idx) => (
               <Card key={idx} className="p-8 bg-slate-900 border-slate-800 hover:border-blue-600/50 transition-all duration-300 hover:scale-105">
-                <div className={`w-14 h-14 rounded-2xl bg-${item.color}-600/10 border border-${item.color}-600/20 flex items-center justify-center mb-6`}>
-                  <Icon name={item.icon as any} size={28} className={`text-${item.color}-500`} />
+                <div className="w-14 h-14 rounded-2xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center mb-6">
+                  <Icon name={item.icon as any} size={28} className="text-blue-500" />
                 </div>
                 <p className="text-slate-300 text-base leading-relaxed">{item.text}</p>
               </Card>
