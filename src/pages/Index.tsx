@@ -171,8 +171,8 @@ export default function Index() {
                 <Icon name="Lightbulb" size={32} className="text-green-400" />
               </div>
               <div>
-                <h4 className="text-2xl font-bold text-blue-600 mb-3">Результат</h4>
-                <p className="text-blue-700 text-lg leading-relaxed font-semibold">
+                <h4 className="text-2xl font-bold mb-3 text-slate-900">Результат</h4>
+                <p className="text-lg leading-relaxed text-slate-900">
                   Вы поймёте, какие действия приведут к росту продаж и прибыли
                 </p>
               </div>
@@ -220,7 +220,7 @@ export default function Index() {
             </h3>
             <p className="text-slate-400 text-lg">Получите в подарок</p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="text-6xl mb-4 bg-slate-900">
             {[
               { emoji: '🧾', title: 'Чек-лист РОПа' },
               { emoji: '📋', title: 'Чек-лист МОПа' },
@@ -279,7 +279,7 @@ export default function Index() {
                 <div className="w-16 h-16 rounded-2xl bg-green-600/20 border border-green-600/30 flex items-center justify-center mx-auto mb-6">
                   <Icon name="Gift" size={32} className="text-green-400" />
                 </div>
-                <div className="text-6xl font-black text-white mb-4">0 ₽</div>
+                <div className="text-6xl font-black text-white mb-4 mx-0">0 ₽</div>
                 <p className="text-xl text-slate-300 font-medium">
                   Отдел продаж от 5 человек
                 </p>
