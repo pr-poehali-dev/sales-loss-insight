@@ -307,8 +307,8 @@ export default function Index() {
                 <Icon name="ShieldCheck" size={28} className="text-yellow-400" />
               </div>
               <div>
-                <h4 className="text-2xl font-bold text-blue-600 mb-3">Гарантия полезности</h4>
-                <p className="text-blue-700 text-lg leading-relaxed font-semibold">
+                <h4 className="text-2xl font-bold mb-3 text-slate-900">Гарантия полезности</h4>
+                <p className="text-lg leading-relaxed font-semibold text-slate-900">
                   Если не возьмёте в работу ни одной рекомендации — оплата не требуется
                 </p>
               </div>
