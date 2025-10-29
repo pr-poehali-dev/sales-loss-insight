@@ -15,10 +15,29 @@ export default function Index() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Заявка отправлена! Свяжемся в течение 1 рабочего дня.');
-    setFormData({ name: '', phone: '', email: '', message: '' });
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/2dd52056-ee26-4363-b75d-5019fef47c60', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        toast.success('Заявка отправлена! Свяжемся в течение 1 рабочего дня.');
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      } else {
+        toast.error('Ошибка при отправке. Попробуйте позже.');
+      }
+    } catch (error) {
+      toast.error('Ошибка при отправке. Попробуйте позже.');
+    }
   };
 
   const scrollToSection = (id: string) => {
