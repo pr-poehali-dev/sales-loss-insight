@@ -160,8 +160,8 @@ export default function Index() {
                 <Icon name="Lightbulb" size={32} className="text-green-500" />
               </div>
               <div>
-                <h4 className="text-2xl font-bold text-white mb-3">Результат</h4>
-                <p className="text-slate-300 text-lg leading-relaxed">
+                <h4 className="text-2xl font-bold text-slate-900 mb-3">Результат</h4>
+                <p className="text-slate-800 text-lg leading-relaxed font-medium">
                   Вы поймёте, какие действия приведут к росту продаж и прибыли
                 </p>
               </div>
