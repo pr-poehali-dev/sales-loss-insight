@@ -54,40 +54,49 @@ export default function Index() {
 
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center animate-fade-in">
-            <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg px-6 py-2">
-              📉 Найдём ваши потерянные деньги
-            </Badge>
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Покажем, где вы теряете
-              <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent">
-                деньги в продажах
-              </span>
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto">
-              На живых примерах. За 5 дней. Без CRM. Без боли.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              <div className="flex items-center gap-2 text-gray-700">
-                <Icon name="CheckCircle2" className="text-green-500" size={20} />
-                <span>Без подключения CRM</span>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left animate-fade-in">
+              <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg px-6 py-2">
+                📉 Найдём ваши потерянные деньги
+              </Badge>
+              <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Покажем, где вы теряете
+                <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent">
+                  деньги в продажах
+                </span>
+              </h2>
+              <p className="text-xl md:text-2xl text-gray-600 mb-4">
+                На живых примерах. За 5 дней. Без CRM. Без боли.
+              </p>
+              <div className="flex flex-col gap-3 mb-10">
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Icon name="CheckCircle2" className="text-green-500" size={20} />
+                  <span>Без подключения CRM</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Icon name="Shield" className="text-blue-500" size={20} />
+                  <span>Полная конфиденциальность</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Icon name="Zap" className="text-purple-500" size={20} />
+                  <span>Результат за 5 дней</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-gray-700">
-                <Icon name="Shield" className="text-blue-500" size={20} />
-                <span>Полная конфиденциальность</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-700">
-                <Icon name="Zap" className="text-purple-500" size={20} />
-                <span>Результат за 5 дней</span>
-              </div>
+              <Button 
+                onClick={() => scrollToSection('contact')} 
+                size="lg" 
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+              >
+                Хочу разбор 🚀
+              </Button>
             </div>
-            <Button 
-              onClick={() => scrollToSection('contact')} 
-              size="lg" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
-            >
-              Хочу разбор 🚀
-            </Button>
+            <div className="animate-fade-in">
+              <img 
+                src="https://cdn.poehali.dev/projects/ac67bf16-52eb-49a3-95c1-aa830d31ee66/files/54ad2466-3b1c-4476-b9d6-58d631ab3096.jpg"
+                alt="Аналитика продаж"
+                className="w-full rounded-2xl shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
