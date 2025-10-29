@@ -205,7 +205,7 @@ export default function Index() {
             ))}
           </div>
           <Card className="p-10 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-600/30">
-            <p className="text-center text-2xl font-bold text-white">
+            <p className="text-center text-2xl font-bold text-slate-900">
               Ясная картина: где теряете деньги и как превратить это в рост
             </p>
           </Card>
