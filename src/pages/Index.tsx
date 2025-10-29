@@ -280,7 +280,7 @@ export default function Index() {
                   <Icon name="Gift" size={32} className="text-green-400" />
                 </div>
                 <div className="text-6xl font-black text-white mb-4 mx-0">0 ₽</div>
-                <p className="text-xl text-slate-300 font-medium">
+                <p className="text-xl font-medium text-slate-900">
                   Отдел продаж от 5 человек
                 </p>
               </div>
