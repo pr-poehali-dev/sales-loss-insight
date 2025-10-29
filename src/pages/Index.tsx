@@ -54,35 +54,46 @@ export default function Index() {
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
         
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center animate-fade-in">
-            <Badge className="mb-8 bg-blue-600/10 text-blue-400 border border-blue-600/20 px-4 py-2 text-sm font-medium">
-              Бесплатная диагностика для отделов 5+ человек
-            </Badge>
-            <h2 className="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tight">
-              <span className="text-white">Диагностика</span>
-              <span className="block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mt-2">
-                точки роста продаж
-              </span>
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-400 mb-6 max-w-3xl mx-auto font-medium">
-              Узнайте, где бизнес теряет прибыль — и как вырасти до +150%
-            </p>
-            <p className="text-base md:text-lg text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Индивидуальная встреча с экспертом. Получите расчёт потенциала роста в рублях и план действий.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                onClick={() => scrollToSection('contact')} 
-                size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-10 py-7 rounded-xl font-semibold shadow-2xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all duration-300 hover:scale-105 border-0"
-              >
-                Записаться на диагностику
-              </Button>
-              <div className="flex items-center gap-2 text-slate-400 text-sm">
-                <Icon name="Clock" size={16} />
-                <span>60–90 минут в Zoom</span>
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <Badge className="mb-8 bg-blue-600/10 text-blue-400 border border-blue-600/20 px-4 py-2 text-sm font-medium">
+                Бесплатная диагностика для отделов 5+ человек
+              </Badge>
+              <h2 className="text-5xl md:text-7xl font-black mb-8 leading-none tracking-tight">
+                <span className="text-white">Диагностика</span>
+                <span className="block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mt-2">
+                  точки роста продаж
+                </span>
+              </h2>
+              <p className="text-xl md:text-2xl text-slate-400 mb-6 font-medium">
+                Узнайте, где бизнес теряет прибыль — и как вырасти до +150%
+              </p>
+              <p className="text-base md:text-lg text-slate-500 mb-12 leading-relaxed">
+                Индивидуальная встреча с экспертом. Получите расчёт потенциала роста в рублях и план действий.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <Button 
+                  onClick={() => scrollToSection('contact')} 
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-10 py-7 rounded-xl font-semibold shadow-2xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all duration-300 hover:scale-105 border-0"
+                >
+                  Записаться на диагностику
+                </Button>
+                <div className="flex items-center gap-2 text-slate-400 text-sm">
+                  <Icon name="Clock" size={16} />
+                  <span>60–90 минут в Zoom</span>
+                </div>
               </div>
+            </div>
+
+            <div className="relative hidden lg:block">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-3xl"></div>
+              <img 
+                src="https://cdn.poehali.dev/projects/ac67bf16-52eb-49a3-95c1-aa830d31ee66/files/f9b13aef-f138-49c7-8521-f56b290cfb4d.jpg"
+                alt="AI помощник по анализу продаж"
+                className="relative rounded-3xl shadow-2xl border border-slate-800/50"
+              />
             </div>
           </div>
         </div>
