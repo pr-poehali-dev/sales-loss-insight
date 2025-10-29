@@ -165,14 +165,14 @@ export default function Index() {
               </Card>
             ))}
           </div>
-          <Card className="p-10 bg-gradient-to-r from-green-600/10 to-emerald-600/10 border-green-600/20">
+          <Card className="p-10 bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-green-600/30">
             <div className="flex items-start gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
-                <Icon name="Lightbulb" size={32} className="text-green-500" />
+              <div className="w-16 h-16 rounded-2xl bg-green-600/30 border border-green-600/40 flex items-center justify-center flex-shrink-0">
+                <Icon name="Lightbulb" size={32} className="text-green-400" />
               </div>
               <div>
-                <h4 className="text-2xl font-bold text-slate-900 mb-3">Результат</h4>
-                <p className="text-slate-800 text-lg leading-relaxed font-medium">
+                <h4 className="text-2xl font-bold text-white mb-3">Результат</h4>
+                <p className="text-slate-200 text-lg leading-relaxed font-medium">
                   Вы поймёте, какие действия приведут к росту продаж и прибыли
                 </p>
               </div>
@@ -204,7 +204,7 @@ export default function Index() {
               </Card>
             ))}
           </div>
-          <Card className="p-10 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border-blue-600/20">
+          <Card className="p-10 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-600/30">
             <p className="text-center text-2xl font-bold text-white">
               Ясная картина: где теряете деньги и как превратить это в рост
             </p>
@@ -301,14 +301,14 @@ export default function Index() {
             </Card>
           </div>
 
-          <Card className="p-10 bg-gradient-to-r from-yellow-600/10 to-orange-600/10 border-yellow-600/20">
+          <Card className="p-10 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-600/30">
             <div className="flex items-start gap-6">
-              <div className="w-14 h-14 rounded-xl bg-yellow-600/20 border border-yellow-600/30 flex items-center justify-center flex-shrink-0">
-                <Icon name="ShieldCheck" size={28} className="text-yellow-500" />
+              <div className="w-14 h-14 rounded-xl bg-yellow-600/30 border border-yellow-600/40 flex items-center justify-center flex-shrink-0">
+                <Icon name="ShieldCheck" size={28} className="text-yellow-400" />
               </div>
               <div>
                 <h4 className="text-2xl font-bold text-white mb-3">Гарантия полезности</h4>
-                <p className="text-slate-300 text-lg leading-relaxed">
+                <p className="text-slate-200 text-lg leading-relaxed font-medium">
                   Если не возьмёте в работу ни одной рекомендации — оплата не требуется
                 </p>
               </div>
