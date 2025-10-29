@@ -30,24 +30,24 @@ export default function Index() {
       <div className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Аудит Продаж
+            Диагностика продаж
           </h1>
           <div className="hidden md:flex gap-6">
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-purple-600 transition-colors">
-              Услуги
+            <button onClick={() => scrollToSection('for-whom')} className="text-gray-700 hover:text-purple-600 transition-colors">
+              Для кого
+            </button>
+            <button onClick={() => scrollToSection('process')} className="text-gray-700 hover:text-purple-600 transition-colors">
+              Как проходит
             </button>
             <button onClick={() => scrollToSection('results')} className="text-gray-700 hover:text-purple-600 transition-colors">
               Результаты
             </button>
             <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-purple-600 transition-colors">
-              Тарифы
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-purple-600 transition-colors">
-              Контакты
+              Стоимость
             </button>
           </div>
           <Button onClick={() => scrollToSection('contact')} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
-            Оставить заявку
+            Записаться
           </Button>
         </nav>
       </div>
@@ -56,44 +56,31 @@ export default function Index() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left animate-fade-in">
-              <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg px-6 py-2">
-                📉 Найдём ваши потерянные деньги
-              </Badge>
               <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Покажем, где вы теряете
+                Диагностика точки роста
                 <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent">
-                  деньги в продажах
+                  продаж
                 </span>
               </h2>
-              <p className="text-xl md:text-2xl text-gray-600 mb-4">
-                На живых примерах. За 5 дней. Без CRM. Без боли.
+              <p className="text-xl md:text-2xl text-gray-600 mb-6 font-medium">
+                Узнайте, где ваш бизнес теряет прибыль — и как вырасти до +150%
               </p>
-              <div className="flex flex-col gap-3 mb-10">
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Icon name="CheckCircle2" className="text-green-500" size={20} />
-                  <span>Без подключения CRM</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Icon name="Shield" className="text-blue-500" size={20} />
-                  <span>Полная конфиденциальность</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Icon name="Zap" className="text-purple-500" size={20} />
-                  <span>Результат за 5 дней</span>
-                </div>
-              </div>
+              <p className="text-lg text-gray-600 mb-8">
+                Индивидуальная встреча с экспертом, на которой вы получите оценку потенциала роста оборота и прибыли в рублях и рекомендации, что конкретно нужно изменить, чтобы расти быстрее.
+              </p>
               <Button 
                 onClick={() => scrollToSection('contact')} 
                 size="lg" 
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 mb-4"
               >
-                Хочу разбор 🚀
+                👉 Записаться на диагностику
               </Button>
+              <p className="text-sm text-gray-500">60–90 минут онлайн в Zoom</p>
             </div>
             <div className="animate-fade-in">
               <img 
                 src="https://cdn.poehali.dev/projects/ac67bf16-52eb-49a3-95c1-aa830d31ee66/files/54ad2466-3b1c-4476-b9d6-58d631ab3096.jpg"
-                alt="Аналитика продаж"
+                alt="Диагностика продаж"
                 className="w-full rounded-2xl shadow-2xl"
               />
             </div>
@@ -101,47 +88,82 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-4 bg-white/50">
+      <section id="for-whom" className="py-20 px-4 bg-white/50">
+        <div className="container mx-auto max-w-6xl">
+          <h3 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            Для кого эта диагностика
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: 'Users', text: 'Для собственников и директоров бизнеса с отделом продаж от 5 человек' },
+              { icon: 'TrendingUp', text: 'Для компаний, где продажи идут стабильно, но рост замедлился' },
+              { icon: 'Target', text: 'Для тех, кто хочет понять, где "застряли" деньги и что мешает масштабироваться' }
+            ].map((item, idx) => (
+              <Card key={idx} className="p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6 mx-auto shadow-lg">
+                  <Icon name={item.icon as any} size={32} className="text-white" />
+                </div>
+                <p className="text-gray-700 text-lg">{item.text}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="process" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <h3 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            📌 Что предлагаем
+            Что происходит на диагностике
           </h3>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Мы берём 5 ваших слитых сделок и показываем вам:
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {[
-              { icon: 'Search', title: 'Ошибки', desc: 'которые стоили вам выручки', color: 'from-red-500 to-orange-500' },
-              { icon: 'DollarSign', title: 'Места потерь', desc: 'где вы могли закрыть, но не дожали', color: 'from-green-500 to-emerald-500' },
-              { icon: 'TrendingUp', title: 'Потенциал', desc: 'что можно было спасти и как', color: 'from-blue-500 to-cyan-500' },
-              { icon: 'Lightbulb', title: 'Рекомендации', desc: 'что сделать, чтобы больше так не было', color: 'from-purple-500 to-pink-500' }
+              { icon: '💬', title: 'Анализ бизнеса', desc: 'Эксперт задаёт вопросы о компании, рынке, клиентской базе и системе продаж' },
+              { icon: '📊', title: 'Выявление проблем', desc: 'Анализирует текущие показатели и выявляет узкие места' },
+              { icon: '💡', title: 'Расчёт потенциала', desc: 'Рассчитывает потенциал роста оборота и прибыли' },
+              { icon: '🧭', title: 'Рекомендации', desc: 'Даёт конкретные рекомендации, что нужно скорректировать' }
             ].map((item, idx) => (
-              <Card key={idx} className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-scale-in border-2 border-transparent hover:border-purple-200" style={{ animationDelay: `${idx * 0.1}s` }}>
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 shadow-lg`}>
-                  <Icon name={item.icon as any} size={28} className="text-white" />
-                </div>
+              <Card key={idx} className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="text-5xl mb-4">{item.icon}</div>
                 <h4 className="text-xl font-bold mb-2">{item.title}</h4>
                 <p className="text-gray-600">{item.desc}</p>
               </Card>
             ))}
           </div>
+          <div className="mt-12 bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl p-8 text-center">
+            <p className="text-xl font-medium text-gray-800">
+              После встречи вы поймёте, <span className="font-bold text-purple-700">какие действия реально приведут к увеличению продаж и прибыли.</span>
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <div className="mt-12 bg-gradient-to-r from-purple-100 to-pink-100 rounded-3xl p-8">
-            <h4 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Icon name="AlertCircle" className="text-purple-600" />
-              Без боли и сложностей
-            </h4>
-            <div className="grid md:grid-cols-3 gap-4">
-              {[
-                '❌ Без подключения к CRM',
-                '❌ Без шаблонов и воды',
-                '❌ Без раскрытия имён клиентов'
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2 text-gray-700 font-medium">
-                  <span className="text-lg">{item}</span>
+      <section id="results" className="py-20 px-4 bg-white/50">
+        <div className="container mx-auto max-w-6xl">
+          <h3 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            Результат диагностики
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              { icon: 'TrendingUp', title: 'Прогноз роста оборота и прибыли', desc: 'в рублях и процентах' },
+              { icon: 'ListChecks', title: 'Перечень конкретных шагов', desc: 'для увеличения продаж' },
+              { icon: 'FileText', title: 'Экспертное заключение', desc: 'с зонами потерь и точками влияния' }
+            ].map((item, idx) => (
+              <Card key={idx} className="p-8 text-center hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6 mx-auto shadow-lg">
+                  <Icon name={item.icon as any} size={32} className="text-white" />
                 </div>
-              ))}
-            </div>
+                <h4 className="text-xl font-bold mb-2">✅ {item.title}</h4>
+                <p className="text-gray-600">{item.desc}</p>
+              </Card>
+            ))}
+          </div>
+          <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-3xl p-8 text-center">
+            <p className="text-2xl font-bold text-gray-800 mb-2">
+              Вы получите ясную картину:
+            </p>
+            <p className="text-xl text-gray-700">
+              где вы теряете деньги и как превратить это в рост.
+            </p>
           </div>
         </div>
       </section>
@@ -149,309 +171,146 @@ export default function Index() {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <h3 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            ⚠️ Что нужно от вас
+            Полезные материалы в подарок
           </h3>
           <p className="text-center text-gray-600 mb-12 text-lg">
-            Всего 10 минут вашего времени:
+            После диагностики вы сможете использовать эти инструменты для самостоятельной работы и контроля отдела продаж.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: 'Image', text: 'Скрины сделок (можно с замазанными полями)' },
-              { icon: 'MessageSquare', text: 'Переписка или краткое описание диалога' },
-              { icon: 'Phone', text: 'Запись 3х последних звонков (по каждой сделке)' },
-              { icon: 'Brain', text: 'Ваше мнение: «почему сделка не закрылась»' },
-              { icon: 'Video', text: 'Видеозапись 1 встречи (если есть)' }
+              { emoji: '🧾', title: 'Чек-лист проверки РОПа' },
+              { emoji: '📋', title: 'Чек-лист проверки МОПа' },
+              { emoji: '🗂', title: 'План РОПа на 90 дней' },
+              { emoji: '📈', title: 'Калькулятор «Точки роста» (Excel)' }
             ].map((item, idx) => (
-              <Card key={idx} className="p-6 bg-white hover:shadow-lg transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
-                    <Icon name={item.icon as any} size={24} className="text-white" />
-                  </div>
-                  <p className="text-gray-700 font-medium">{item.text}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Badge className="bg-blue-100 text-blue-700 text-base px-4 py-2">
-              <Icon name="Lock" size={16} className="inline mr-2" />
-              Без интеграций. Без доступа к CRM. Без риска.
-            </Badge>
-          </div>
-        </div>
-      </section>
-
-      <section id="results" className="py-20 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="container mx-auto max-w-6xl">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            🧠 Что вы получаете
-          </h3>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Через 5 рабочих дней вы получаете:
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center mb-6">
-                <Icon name="Video" size={32} className="text-white" />
-              </div>
-              <h4 className="text-2xl font-bold mb-3">60 минут Zoom с экспертом</h4>
-              <p className="text-gray-600">Разбор как продавать больше с экспертом по продажам</p>
-            </Card>
-
-            <Card className="p-8 bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mb-6">
-                <Icon name="FileSpreadsheet" size={32} className="text-white" />
-              </div>
-              <h4 className="text-2xl font-bold mb-3">Таблица по каждой сделке</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-start gap-2">
-                  <Icon name="X" size={18} className="text-red-500 flex-shrink-0 mt-0.5" />
-                  <span>где продавец не дожал</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="X" size={18} className="text-red-500 flex-shrink-0 mt-0.5" />
-                  <span>где слился на возражении</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="X" size={18} className="text-red-500 flex-shrink-0 mt-0.5" />
-                  <span>где не вышел на ЛПР</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="X" size={18} className="text-red-500 flex-shrink-0 mt-0.5" />
-                  <span>где был шанс вернуть — и его не использовали</span>
-                </li>
-              </ul>
-            </Card>
-          </div>
-
-          <Card className="mt-8 p-8 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
-                <Icon name="Target" size={24} className="text-white" />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold mb-2">+ Конкретные рекомендации</h4>
-                <p className="text-gray-700">Что делать иначе в следующий раз для закрытия сделок</p>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
-
-      <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-12 border-2 border-red-200">
-            <h3 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              💥 Почему это важно
-            </h3>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
-              <p>
-                <strong>Вы видите финал сделки</strong> — но не понимаете, где именно она слилась.
-              </p>
-              <p>
-                <strong>CRM покажет статус.</strong> BI-система — цифры.
-              </p>
-              <p className="text-xl font-bold text-red-600">
-                Но никто не покажет, где МОП проиграл: на боли, на ЛПРе или на эмоциях.
-              </p>
-              <p className="text-2xl font-bold text-center mt-8 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Мы показываем.
-              </p>
-              <p className="text-center text-gray-600">
-                На ваших примерах. Без оправданий. С пользой с первого дня.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="pricing" className="py-20 px-4 bg-gradient-to-br from-slate-50 to-purple-50">
-        <div className="container mx-auto max-w-4xl">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-12">
-            💰 Стоимость
-          </h3>
-          <Card className="p-10 bg-white shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 border-4 border-purple-200">
-            <div className="text-center mb-8">
-              <div className="text-6xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                20 000 ₽
-              </div>
-              <p className="text-xl text-gray-600">За полный разбор 5 сделок</p>
-            </div>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-3 bg-green-50 p-4 rounded-xl border border-green-200">
-                <Icon name="Gift" className="text-green-600 flex-shrink-0" size={24} />
-                <p className="text-gray-700">
-                  <strong>Бесплатно</strong> — если мы не найдём минимум 3 ошибки, стоившие вам выручки
-                </p>
-              </div>
-              <div className="flex items-start gap-3 bg-blue-50 p-4 rounded-xl border border-blue-200">
-                <Icon name="Users" className="text-blue-600 flex-shrink-0" size={24} />
-                <p className="text-gray-700">
-                  Для отделов продаж от 5 человек — <strong>сумма зачитывается</strong> в основной проект
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-2xl border-2 border-yellow-200">
-              <p className="text-center text-lg font-bold text-gray-800">
-                📌 Один возврат сделки — и вы отбиваете весь разбор.<br />
-                <span className="text-green-600">Остальное — в плюс.</span>
-              </p>
-            </div>
-          </Card>
-        </div>
-      </section>
-
-      <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-12">
-            🔐 Конфиденциальность и NDA
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: 'FileCheck', title: 'NDA', desc: 'Подпишем по вашему шаблону или нашему' },
-              { icon: 'Trash2', title: 'Удаление данных', desc: 'Все данные удаляем через 7 дней' },
-              { icon: 'ShieldCheck', title: 'Анонимность', desc: 'Полная анонимность по желанию' }
-            ].map((item, idx) => (
-              <Card key={idx} className="p-6 text-center hover:shadow-lg transition-all duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mx-auto mb-4">
-                  <Icon name={item.icon as any} size={28} className="text-white" />
-                </div>
-                <h4 className="font-bold text-lg mb-2">{item.title}</h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+              <Card key={idx} className="p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="text-6xl mb-4">{item.emoji}</div>
+                <h4 className="text-lg font-semibold text-gray-700">{item.title}</h4>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-red-50 to-orange-50">
+      <section className="py-20 px-4 bg-white/50">
         <div className="container mx-auto max-w-4xl text-center">
-          <Badge className="bg-red-500 text-white text-lg px-6 py-2 mb-6">
-            <Icon name="Clock" size={20} className="inline mr-2" />
-            Места ограничены
-          </Badge>
-          <h3 className="text-4xl md:text-5xl font-bold mb-6">
-            ⏳ Мы берём не больше<br />5 отделов в месяц
+          <h3 className="text-4xl md:text-5xl font-bold mb-8">
+            Кто проводит диагностику
           </h3>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Почему так мало? Потому что это не поток. Мы вникаем.<br />
-            <strong>Ручная аналитика. Результат — важнее масштаба.</strong>
+          <p className="text-xl text-gray-700 leading-relaxed">
+            Диагностику проводят <span className="font-bold text-purple-700">эксперты-практики с опытом 10+ лет</span> в B2B-продажах и управлении, по методикам и технологиям <span className="font-bold">Андрея Веселова</span>, автора 5 книг в т.ч. <span className="italic">"Организация работы отдела продаж. Системный подход"</span>.
           </p>
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-3xl">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            📞 Готовы проверить,<br />где сливаются ваши деньги?
+      <section id="pricing" className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h3 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            Стоимость и гарантия полезности
           </h3>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            ✍️ Напишите «Хочу разбор» или оставьте заявку:
-          </p>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="p-10 text-center border-4 border-green-500 hover:shadow-2xl transition-all">
+              <div className="text-6xl mb-4">💼</div>
+              <h4 className="text-3xl font-bold mb-4 text-green-600">Бесплатно</h4>
+              <p className="text-xl text-gray-700">для компаний с отделом продаж от 5 человек</p>
+            </Card>
+            <Card className="p-10 text-center hover:shadow-xl transition-all">
+              <div className="text-6xl mb-4">💰</div>
+              <h4 className="text-3xl font-bold mb-4">20 000 ₽</h4>
+              <p className="text-xl text-gray-700">для отделов продаж до 5 человек</p>
+            </Card>
+          </div>
+          <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-3xl p-10">
+            <div className="flex items-start gap-4">
+              <div className="text-5xl">🛡</div>
+              <div>
+                <h4 className="text-2xl font-bold mb-4">Гарантия полезности:</h4>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Если после встречи вы не возьмёте в работу ни одной рекомендации или сочтёте диагностику бесполезной — оплата не требуется.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <Card className="p-8 shadow-2xl bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200">
+      <section id="contact" className="py-20 px-4 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500">
+        <div className="container mx-auto max-w-4xl text-center text-white">
+          <h3 className="text-4xl md:text-6xl font-bold mb-6">
+            Хотите узнать, где теряются ваши продажи — и что даст рост на 150%?
+          </h3>
+          <p className="text-xl md:text-2xl mb-10 opacity-90">
+            Запишитесь на бесплатную диагностику, чтобы получить расчёт потенциала роста и конкретные рекомендации от эксперта.
+          </p>
+          
+          <Card className="p-8 md:p-12 bg-white/95 backdrop-blur">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium mb-2">Ваше имя</label>
                 <Input
-                  required
+                  placeholder="Ваше имя"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Иван Иванов"
-                  className="bg-white"
+                  required
+                  className="text-lg py-6"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Телефон</label>
                 <Input
-                  required
                   type="tel"
+                  placeholder="Телефон"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="+7 916 363-63-91"
-                  className="bg-white"
+                  required
+                  className="text-lg py-6"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
                 <Input
-                  required
                   type="email"
+                  placeholder="Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="ivan@company.ru"
-                  className="bg-white"
+                  required
+                  className="text-lg py-6"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Сообщение (необязательно)</label>
                 <Textarea
+                  placeholder="Расскажите коротко о вашем бизнесе и отделе продаж"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Расскажите о вашей ситуации..."
-                  className="bg-white min-h-[100px]"
+                  rows={4}
+                  className="text-lg"
                 />
               </div>
-              <Button
-                type="submit"
+              <Button 
+                type="submit" 
                 size="lg"
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-lg py-6"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-xl py-7 rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
               >
-                Отправить заявку 🚀
+                🚀 Записаться на диагностику
               </Button>
             </form>
-
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <p className="text-center text-gray-600 mb-4">Или свяжитесь напрямую:</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://wa.me/79163636391"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
-                >
-                  <Icon name="Phone" size={20} />
-                  <span>WhatsApp</span>
-                </a>
-                <a
-                  href="https://t.me/veselovandrei"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  <Icon name="Send" size={20} />
-                  <span>Telegram</span>
-                </a>
-              </div>
-            </div>
           </Card>
-
-          <p className="text-center text-gray-500 mt-8">
-            ⏳ <strong>Ответ</strong> — в течение 1 рабочего дня.<br />
-            <strong>Результаты</strong> — через 5.
-          </p>
         </div>
       </section>
 
-      <footer className="bg-gradient-to-r from-purple-900 to-pink-900 text-white py-12 px-4">
+      <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl font-bold mb-4">Аудит Продаж</h2>
-          <p className="text-purple-200 mb-6">
-            Покажем, где вы теряете деньги в отделе продаж
+          <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Диагностика точки роста продаж
+          </h2>
+          <p className="text-gray-400 mb-6">
+            Узнайте потенциал роста вашего бизнеса за одну встречу
           </p>
-          <div className="flex justify-center gap-6 mb-6">
-            <a href="https://t.me/veselovandrei" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
-              Telegram
+          <div className="flex justify-center gap-6 text-gray-400">
+            <a href="mailto:info@example.com" className="hover:text-purple-400 transition-colors">
+              info@example.com
             </a>
-            <a href="https://wa.me/79163636391" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
-              WhatsApp
+            <a href="tel:+79999999999" className="hover:text-purple-400 transition-colors">
+              +7 (999) 999-99-99
             </a>
           </div>
-          <p className="text-purple-300 text-sm">
-            © 2024 Аудит Продаж. Все права защищены.
-          </p>
         </div>
       </footer>
     </div>
