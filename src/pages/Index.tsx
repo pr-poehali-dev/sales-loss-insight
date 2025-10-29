@@ -171,8 +171,8 @@ export default function Index() {
                 <Icon name="Lightbulb" size={32} className="text-green-400" />
               </div>
               <div>
-                <h4 className="text-2xl font-bold text-white mb-3">Результат</h4>
-                <p className="text-slate-200 text-lg leading-relaxed font-medium">
+                <h4 className="text-2xl font-bold text-blue-600 mb-3">Результат</h4>
+                <p className="text-blue-700 text-lg leading-relaxed font-semibold">
                   Вы поймёте, какие действия приведут к росту продаж и прибыли
                 </p>
               </div>
@@ -307,8 +307,8 @@ export default function Index() {
                 <Icon name="ShieldCheck" size={28} className="text-yellow-400" />
               </div>
               <div>
-                <h4 className="text-2xl font-bold text-white mb-3">Гарантия полезности</h4>
-                <p className="text-slate-200 text-lg leading-relaxed font-medium">
+                <h4 className="text-2xl font-bold text-blue-600 mb-3">Гарантия полезности</h4>
+                <p className="text-blue-700 text-lg leading-relaxed font-semibold">
                   Если не возьмёте в работу ни одной рекомендации — оплата не требуется
                 </p>
               </div>
