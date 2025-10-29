@@ -228,7 +228,15 @@ export default function Index() {
               { emoji: '📈', title: 'Калькулятор роста (Excel)' }
             ].map((item, idx) => (
               <Card key={idx} className="p-8 bg-slate-900 border-slate-800 hover:bg-slate-800/50 transition-all duration-300 text-center">
-                <div className="text-6xl mb-4">{item.emoji}</div>
+                {idx === 2 ? (
+                  <img 
+                    src="https://cdn.poehali.dev/projects/ac67bf16-52eb-49a3-95c1-aa830d31ee66/files/0afb16b6-6328-4d6b-9e1d-0b6826519186.jpg"
+                    alt={item.title}
+                    className="w-16 h-16 mx-auto mb-4 rounded-lg object-cover"
+                  />
+                ) : (
+                  <div className="text-6xl mb-4">{item.emoji}</div>
+                )}
                 <h4 className="text-sm font-semibold text-slate-300">{item.title}</h4>
               </Card>
             ))}
