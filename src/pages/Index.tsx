@@ -90,8 +90,8 @@ export default function Index() {
             <div className="relative hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-3xl"></div>
               <img 
-                src="https://cdn.poehali.dev/projects/ac67bf16-52eb-49a3-95c1-aa830d31ee66/files/8544e9cb-f094-4189-bd3c-7d04f0d793e5.jpg"
-                alt="Руководитель отдела продаж"
+                src="https://cdn.poehali.dev/projects/ac67bf16-52eb-49a3-95c1-aa830d31ee66/files/a1ca9a40-ba93-4d16-a379-eb619545e017.jpg"
+                alt="График роста продаж"
                 className="relative rounded-3xl shadow-2xl border border-slate-800/50"
               />
             </div>
